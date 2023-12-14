@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href={{url_for('static', filename='assets/favicon.ico')}} />
+    <!-- font -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- css -->
+    <link href={{ url_for('static', filename='/css/styles.css') }} type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="signup-section" data-aos="fade-up" data-aos-duration="2000">
+      <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="text-white my-0 text-uppercase">Wood log Counter</h1>
+            <h2 class="text-white-50 mx-auto mt-1">Wood Counting: Monitor dan menghitung kayu</h2>
+            <h3 class="text-white-50 mx-auto">Hasil Deteksi dan Hitung</h3>
+          </div>
+        </div>
+      </div>
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+          <div class="col-xl d-flex justify-content-center">
+            <div class="card" style="width: 25rem" data-aos="fade-up" data-aos-duration="1500">
+              <img id="resultImage" class="card-img-top" src="{{ result_image }}" alt="Detection Results" />
+              <div class="card-body">
+                <h5 class="card-title text-uppercase fw-bold">Hasil Prediksi dan Hitung</h5>
+                <p class="card-text">Jumlah objek yang terdeteksi : {{num_objects}} Logs</p>
+                <a href="{{ url_for('predict') }}" class="btn btn-outline-primary">Kembali</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section bg-black">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-md-4 mb-3 mb-md-0" data-aos="zoom-out-up">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">Aceh, Indonesia</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0" data-aos="zoom-out-up">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50"><a href="#!">woodcounters@gmail.com</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0" data-aos="zoom-out-up">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">+6287728610693</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social d-flex justify-content-center">
+          <a class="mx-2" href="https://twitter.com/Rf45Riza"><i class="fab fa-twitter"></i></a>
+          <a class="mx-2" href="https://www.facebook.com/uwaw.nxb"><i class="fab fa-facebook-f"></i></a>
+          <a class="mx-2" href="https://github.com/Riza14"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
